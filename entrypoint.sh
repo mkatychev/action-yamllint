@@ -31,10 +31,11 @@ fi
 # Enable globstar so ** globs recursively
 shopt -s globstar
 
-/usr/local/bin/yamllint "${options[@]}" ${INPUT_FILE_OR_DIR:-.} | tee -a "$LOGFILE"
+# yamllint "${options[@]}" ${INPUT_FILE_OR_DIR:-.} | tee -a "$LOGFILE"
+yamllint "${options[@]}" ${INPUT_FILE_OR_DIR:-.}
 exitcode=$?
 
-shopt -u globstar
-echo "::set-output name=logfile::$(realpath ${LOGFILE})"
+# shopt -u globstar
+# echo "::set-output name=logfile::$(realpath ${LOGFILE})"
 
 exit $exitcode
