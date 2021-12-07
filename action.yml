@@ -32,7 +32,7 @@ outputs:
 
 runs:
   using: 'docker'
-  image: 'ilirbekteshi/action-yamllint'
+  image: 'Dockerfile'
   env:
     INPUT_FILE_OR_DIR: ${{ inputs.file_or_dir }}
     INPUT_CONFIG_FILE: ${{ inputs.config_file }}
